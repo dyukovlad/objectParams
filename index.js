@@ -8,7 +8,7 @@ function FormParamsObject(objectParams){
 
     this.convertObjectToArray = function(propPath) {
 
-        if (!propPath.trim()) return;
+        if (!propPath) return;
         
         var newArr = [];
         var obj = this.getObjectProperty(propPath);
@@ -27,7 +27,7 @@ function FormParamsObject(objectParams){
 
     this.getObjectProperty = function(propPath){
 
-        if (!propPath.trim()) return;
+        if (!propPath) return;
         
         var obj = this.objectParams;
         var path = propPath.split('.');
@@ -46,7 +46,7 @@ function FormParamsObject(objectParams){
 
     this.setObjectProperty = function(propPath, value){
 
-        if (!propPath.trim() || !value.trim()) return;
+        if (!propPath || !value) return;
 
         var obj = this.objectParams;
         var path = propPath.split('.');
